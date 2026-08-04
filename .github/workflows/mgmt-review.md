@@ -49,6 +49,12 @@ network:
 tools:
   github:
     toolsets: [context, repos, pull_requests, actions]
+    # TEMPORARY (fork testing only — DO NOT ship to upstream):
+    # On a public fork the MCP DIFC guard tags the PR resource secrecy:private and
+    # blocks pull_request_read (sink-visibility / forcePublicRepos enforcement),
+    # so the agent can't read the PR and returns report_incomplete with no comment.
+    # `allow` disables both protections so the label run produces a real comment/label.
+    private-to-public-flows: allow
   bash: true
 safe-outputs:
   add-comment:
