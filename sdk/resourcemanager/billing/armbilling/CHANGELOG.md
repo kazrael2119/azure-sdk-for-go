@@ -1,6 +1,6 @@
 # Release History
 
-## 2.0.0 (2026-07-24)
+## 2.0.0 (2026-08-24)
 ### Breaking Changes
 
 - Struct `EnrollmentDetails` has been removed
